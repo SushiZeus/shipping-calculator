@@ -145,14 +145,14 @@ if calculate_btn:
         
         with col1:
             st.markdown('<div class="result-box">', unsafe_allow_html=True)
-            st.metric("Fuel Cost", format_amount_in_currency(prc))
-            st.metric("Driver Allowance", format_amount_in_currency(al))
+            st.metric("Fuel Cost", format_amount_in_currency (prc))
+            st.metric("Driver Allowance", format_amount_in_currency (al))
             st.markdown('</div>', unsafe_allow_html=True)
             
         with col2:
             st.markdown('<div class="result-box">', unsafe_allow_html=True)
-            st.metric("Total Cost", format_amount_in_currency(tot))
-            st.metric("**Selling Price**", f"**{format_amount_in_currency(su)}**", 
+            st.metric("Total Cost", format_amount_in_currency (tot))
+            st.metric("**Selling Price**", f"**{format_amount_in_currency (su)}**", 
                      delta=f"{pro}% profit margin")
             st.markdown('</div>', unsafe_allow_html=True)
         
@@ -160,10 +160,10 @@ if calculate_btn:
         with st.expander("📋 View Detailed Calculation"):
             st.write(f"**Calculation Details:**")
             st.write(f"- Delivery Distance: {d} km (round trip: {d*2} km)")
-            st.write(f"- Fuel Price: {format_amount_in_currency(pr)} per liter")
+            st.write(f"- Fuel Price: {format_amount_in_currency (pr)} per liter")
             st.write(f"- Shipment Type: {t}")
             st.write(f"- Trip Duration: {tri} days")
-            st.write(f"- Wear and Tear: {format_amount_in_currency(wt)}")
+            st.write(f"- Wear and Tear: {format_amount_in_currency (wt)}")
             st.write(f"- Profit Margin: {pro}%")
             
             if t == "LCL":
